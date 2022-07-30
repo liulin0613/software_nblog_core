@@ -43,6 +43,9 @@ func QueryLog(ctx context.Context, req *core.QueryLogReq) *core.QueryLogResp {
 			logDetails = append(logDetails, strings.Replace(line, logStr, "", 1))
 		}
 	}
+	if len(logDetails) == 0 {
+		logDetails = append(logDetails, "无记录")
+	}
 	resp.LogDetail = logDetails
 	resp.Error = utils.ConvErr(err_code.Success)
 	return resp
