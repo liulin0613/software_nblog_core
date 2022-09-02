@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `docx`;
 
 CREATE TABLE `docx` (
     `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
-    `docx_id` varchar(27) NOT NULL COMMENT '文章id',
+    `docx_id` varchar(27) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文章id',
     `user_id` int(11) NOT NULL COMMENT '作者',
     `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '标题',
     `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '内容',
@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `dir`;
 
 CREATE TABLE `dir` (
     `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
-    `dir_id` varchar(27) NOT NULL COMMENT '文件夹id',
+    `dir_id` varchar(27) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文件夹id',
     `user_id` int(11) NOT NULL COMMENT '作者',
     `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文件夹名字',
     `is_delete` int(2) NOT NULL DEFAULT 0 COMMENT '是否删除',
